@@ -11,8 +11,6 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "commit": "^0.0.4",
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -26,11 +24,6 @@
     "eject": "react-scripts eject",
     "commit": "git-cz",
     "postinstall": "husky install"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
   },
   "eslintConfig": {
     "extends": [
