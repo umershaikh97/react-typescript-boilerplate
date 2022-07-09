@@ -31,7 +31,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-anonymous-default-export': 0,
-    'prettier/prettier': ['error', { singleQuote: true, parser: 'flow' }],
     'import/named': 'off',
     'import/extensions': 0,
     'import/no-unresolved': 0,
