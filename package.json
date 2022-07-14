@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.5",
+    "@mui/material": "^5.9.0",
+    "@mui/styled-engine-sc": "^5.8.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -15,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -24,6 +27,8 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "commit": "git-cz",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install"
   },
   "eslintConfig": {
@@ -31,6 +36,18 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add ."
+    ],
+    "src/**/*.{html,css,less,ejs,json}": [
+      "prettier --write",
+      "git add ."
+    ],
+    "*.js": "eslint --cache --fix"
   },
   "browserslist": {
     "production": [
