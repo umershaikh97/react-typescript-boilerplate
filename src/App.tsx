@@ -1,7 +1,9 @@
 // import Test from '@/components/Test';
 
+import { Typography } from '@mui/material';
+
 function App() {
-  return <div>App</div>;
+  return <Typography>App</Typography>;
 }
 
 export default App;
